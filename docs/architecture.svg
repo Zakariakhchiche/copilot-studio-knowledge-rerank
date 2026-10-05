@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="La question passe par Azure AI Search (60 candidats filtrés par droits d'accès), puis Jev garde au plus 15 passages qui répondent vraiment, rendus à Copilot Studio via System.SearchResults" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5f6b7a"/></marker>
+  </defs>
+  <rect width="880" height="300" fill="#ffffff"/>
+  <text x="20" y="30" font-size="16" font-weight="700" fill="#14213d">Ratisser large, jeter mieux : ce que Copilot Studio a le droit de lire</text>
+
+  <g fill="none" stroke="#5f6b7a" stroke-width="1.5">
+    <path d="M190 120H222" marker-end="url(#a)"/>
+    <path d="M422 120H454" marker-end="url(#a)"/>
+    <path d="M654 120H686" marker-end="url(#a)"/>
+    <path d="M780 160V230H105V160" marker-end="url(#a)"/>
+  </g>
+
+  <rect x="20" y="70" width="170" height="90" rx="10" fill="#eef3fb" stroke="#2f5d9f"/>
+  <text x="105" y="98" text-anchor="middle" font-weight="700" fill="#14213d">Agent Copilot Studio</text>
+  <text x="105" y="118" text-anchor="middle" font-size="12" fill="#3d4756">OnKnowledgeRequested</text>
+  <text x="105" y="136" text-anchor="middle" font-size="10.5" fill="#3d4756">System.SearchQuery</text>
+  <text x="105" y="151" text-anchor="middle" font-size="10.5" fill="#3d4756">System.KeywordSearchQuery</text>
+
+  <rect x="222" y="70" width="200" height="90" rx="10" fill="#f6f7f9" stroke="#8a95a5"/>
+  <text x="322" y="98" text-anchor="middle" font-weight="700" fill="#14213d">Azure AI Search</text>
+  <text x="322" y="118" text-anchor="middle" font-size="12" fill="#3d4756">hybride (mots-clés + vecteurs)</text>
+  <text x="322" y="136" text-anchor="middle" font-size="12" fill="#3d4756">filtre sur les droits d'accès</text>
+  <text x="322" y="153" text-anchor="middle" font-size="12" font-weight="600" fill="#2f5d9f">50 à 100 candidats</text>
+
+  <rect x="454" y="70" width="200" height="90" rx="10" fill="#fdf3e7" stroke="#c77b12"/>
+  <text x="554" y="98" text-anchor="middle" font-weight="700" fill="#14213d">TypeSafe Jev</text>
+  <text x="554" y="118" text-anchor="middle" font-size="12" fill="#3d4756">critère écrit par le métier</text>
+  <text x="554" y="136" text-anchor="middle" font-size="12" fill="#3d4756">écarte : hors sujet, abrogé,</text>
+  <text x="554" y="151" text-anchor="middle" font-size="12" fill="#3d4756">injection de prompt</text>
+
+  <rect x="686" y="70" width="174" height="90" rx="10" fill="#eaf6ee" stroke="#2e8b57"/>
+  <text x="773" y="98" text-anchor="middle" font-weight="700" fill="#14213d">≤ 15 extraits</text>
+  <text x="773" y="118" text-anchor="middle" font-size="12" fill="#3d4756">triés par pertinence</text>
+  <text x="773" y="136" text-anchor="middle" font-size="12" fill="#3d4756">Content · ContentLocation</text>
+  <text x="773" y="151" text-anchor="middle" font-size="12" fill="#3d4756">· Title</text>
+
+  <text x="440" y="250" text-anchor="middle" font-size="12.5" fill="#3d4756">System.SearchResults : l'agent répond à partir de ces extraits, et de rien d'autre</text>
+  <text x="440" y="280" text-anchor="middle" font-size="11.5" fill="#6b7685">Mode « semantic » : le classement sémantique d'Azure AI Search remplace Jev, sans fournisseur supplémentaire. À comparer avant de choisir.</text>
+</svg>
