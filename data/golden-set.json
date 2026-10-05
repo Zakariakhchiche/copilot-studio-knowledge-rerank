@@ -1,0 +1,159 @@
+{
+ "description": "Questions fictives sur un corpus fictif. Remplacez-les par vos propres questions, avec les passages qu'un expert métier juge corrects.",
+ "items": [
+  {
+   "id": "Q01",
+   "question": "Quel est le montant des pénalités de retard pour une intervention programmée sur le marché A ?",
+   "relevant": [
+    "A-CCAP-12"
+   ],
+   "critical": true,
+   "groups": [
+    "cm-ouest"
+   ]
+  },
+  {
+   "id": "Q02",
+   "question": "Combien de temps le titulaire du marché A a-t-il pour arriver sur site en cas d'urgence, et quelle pénalité s'applique ?",
+   "relevant": [
+    "A-CCAP-13"
+   ],
+   "critical": true,
+   "groups": [
+    "cm-ouest"
+   ]
+  },
+  {
+   "id": "Q03",
+   "question": "Quel est le plafond actuel de révision annuelle des prix du marché A ?",
+   "relevant": [
+    "A-AVT2"
+   ],
+   "critical": true,
+   "groups": [
+    "cm-ouest"
+   ]
+  },
+  {
+   "id": "Q04",
+   "question": "Après combien de jours de mise en demeure peut-on résilier le marché A pour faute ?",
+   "relevant": [
+    "A-CCAP-21"
+   ],
+   "critical": true,
+   "groups": [
+    "cm-ouest"
+   ]
+  },
+  {
+   "id": "Q05",
+   "question": "Quels intérêts sont dus si la ville paie en retard sur le marché A ?",
+   "relevant": [
+    "A-CCAP-15"
+   ],
+   "critical": false,
+   "groups": [
+    "cm-ouest"
+   ]
+  },
+  {
+   "id": "Q06",
+   "question": "Quelle pénalité s'applique en cas de retard du rapport mensuel sur le marché B ?",
+   "relevant": [
+    "B-CCAP-11"
+   ],
+   "critical": true,
+   "groups": [
+    "cm-est"
+   ]
+  },
+  {
+   "id": "Q07",
+   "question": "Combien coûte une prestation de nettoyage non conforme sur le marché B ?",
+   "relevant": [
+    "B-CCAP-11b"
+   ],
+   "critical": true,
+   "groups": [
+    "cm-est"
+   ]
+  },
+  {
+   "id": "Q08",
+   "question": "Quelle indemnité reçoit le titulaire du marché B en cas de résiliation pour motif d'intérêt général ?",
+   "relevant": [
+    "B-CCAP-22"
+   ],
+   "critical": false,
+   "groups": [
+    "cm-est"
+   ]
+  },
+  {
+   "id": "Q09",
+   "question": "La révision des prix du marché B est-elle plafonnée ?",
+   "relevant": [
+    "B-CCAP-16"
+   ],
+   "critical": false,
+   "groups": [
+    "cm-est"
+   ]
+  },
+  {
+   "id": "Q10",
+   "question": "Comment sont calculées les pénalités de retard du marché C ?",
+   "relevant": [
+    "C-CCAP-19"
+   ],
+   "critical": true,
+   "groups": [
+    "juridique"
+   ]
+  },
+  {
+   "id": "Q11",
+   "question": "Quel est le délai d'exécution actuel des travaux du marché C ?",
+   "relevant": [
+    "C-AVT1"
+   ],
+   "critical": true,
+   "groups": [
+    "juridique"
+   ]
+  },
+  {
+   "id": "Q12",
+   "question": "Quand la retenue de garantie du marché C est-elle libérée ?",
+   "relevant": [
+    "C-CCAP-5"
+   ],
+   "critical": false,
+   "groups": [
+    "juridique"
+   ]
+  },
+  {
+   "id": "Q13",
+   "question": "Peut-on remplacer la retenue de garantie du marché A par une garantie à première demande ?",
+   "relevant": [
+    "A-CCAP-9"
+   ],
+   "critical": false,
+   "groups": [
+    "cm-ouest"
+   ]
+  },
+  {
+   "id": "Q14",
+   "question": "À quelles conditions le titulaire du marché B peut-il sous-traiter ?",
+   "relevant": [
+    "B-CCAP-6"
+   ],
+   "critical": false,
+   "groups": [
+    "cm-est"
+   ]
+  }
+ ]
+}
