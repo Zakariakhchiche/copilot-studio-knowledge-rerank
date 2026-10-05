@@ -1,0 +1,48 @@
+# Topic de connaissance personnalisé pour Copilot Studio.
+# À coller dans un nouveau topic, en vue code (Topics > + Ajouter un topic > De zéro > ... > Ouvrir l'éditeur de code).
+# Le déclencheur OnKnowledgeRequested ne se configure qu'en YAML : pas de concepteur graphique.
+#
+# Remplacez https://votre-api.exemple.fr par l'URL de src/server.ts une fois déployé,
+# et <API_KEY> par la valeur de API_KEY. Ne laissez pas la clé en clair : utilisez une
+# variable d'environnement de solution de type secret.
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnKnowledgeRequested
+  id: main
+  intent: {}
+  actions:
+    # System.SearchQuery : question réécrite par l'agent avec le contexte de la conversation
+    # (« et pour les pénalités de retard ? » arrive complétée).
+    # System.KeywordSearchQuery : même question, réécrite pour une recherche par mots-clés.
+    - kind: HttpRequestAction
+      id: rechercheContrats
+      url: ="https://votre-api.exemple.fr/knowledge?q=" & EncodeUrl(System.SearchQuery) & "&kq=" & EncodeUrl(System.KeywordSearchQuery)
+      headers:
+        x-api-key: <API_KEY>
+      response: Topic.reponseRecherche
+      responseSchema:
+        kind: Record
+        properties:
+          results:
+            type:
+              kind: Table
+              properties:
+                Content: String
+                ContentLocation: String
+                Title: String
+
+    # Au plus 15 extraits, déjà triés par l'API : Copilot Studio n'en lit pas davantage,
+    # toutes sources de connaissance confondues.
+    - kind: SetVariable
+      id: rendreExtraits
+      variable: System.SearchResults
+      value: |-
+        =ForAll(Topic.reponseRecherche.results,
+        {
+          Content: Content,
+          ContentLocation: ContentLocation,
+          Title: Title
+        })
+
+inputType: {}
+outputType: {}
