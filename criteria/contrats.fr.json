@@ -1,0 +1,7 @@
+{
+  "version": "2026-10-05",
+  "author": "à remplir par le contract manager qui valide le critère",
+  "instructions": "Ce passage de contrat répond-il directement à la question posée ?",
+  "true": "Oui seulement si le passage énonce lui-même l'obligation, le montant, le taux, le délai ou la condition demandés, pour le sujet de la question.",
+  "false": "Non si le passage ne fait que citer le sujet, renvoyer à un autre article ou à une annexe, définir un terme, ou traiter d'un autre sujet, même avec le même vocabulaire."
+}
